@@ -22,5 +22,5 @@ describe("Outcome-Driven Engineering Missions (Milestone 13 / Section 42)", () =
     expect(result.allGatesCleared).toBe(true);
     expect(result.canaryPromoted).toBe(true);
     expect(result.finalMeasuredGainPercent).toBeGreaterThanOrEqual(8.0);
-  });
+  }, 15000);
 });

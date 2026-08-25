@@ -56,7 +56,7 @@ export class PeerVerifier {
     });
 
     const evidenceHash = crypto.createHash("sha256").update(evidencePayload).digest("hex");
-    const evidenceId = `art-evid-${Date.now().toString().slice(-4)}`;
+    const evidenceId = `art-evid-${params.task.id}-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
     const cleanCode = params.task.code.replace(/[^A-Z0-9]/g, "");
 
     const evidence: EvidenceArtifact = {

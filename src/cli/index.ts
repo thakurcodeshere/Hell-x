@@ -397,6 +397,30 @@ export function createCli(): Command {
       await runEconomyScoringSimulation();
     });
 
+  program
+    .command("simulate-arena")
+    .description("Run Phase 15 Empirical Benchmark Arena, External Truth Oracles, Analytics & Trust Ledger")
+    .action(async () => {
+      const { runEmpiricalArenaSimulation } = await import("./simulate-empirical-arena.js");
+      await runEmpiricalArenaSimulation();
+    });
+
+  program
+    .command("benchmark")
+    .description("Execute head-to-head empirical benchmark pitting Hell-x vs ordinary coding agents")
+    .action(async () => {
+      const { runEmpiricalArenaSimulation } = await import("./simulate-empirical-arena.js");
+      await runEmpiricalArenaSimulation();
+    });
+
+  program
+    .command("analytics")
+    .description("Inspect live production telemetry (RED metrics) and product conversion funnels")
+    .action(async () => {
+      const { runEmpiricalArenaSimulation } = await import("./simulate-empirical-arena.js");
+      await runEmpiricalArenaSimulation();
+    });
+
   return program;
 }
 

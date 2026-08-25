@@ -96,7 +96,7 @@ export * from "./remediation/rca-engine.js";
 export * from "./remediation/hotfix-synthesizer.js";
 export * from "./remediation/self-healing-engine.js";
 
-// Milestone 13: Digital Twin, Blast Radius, Adversarial Debate & Outcome Missions
+// Phase 13: Digital Twin, Blast Radius, Adversarial Debate & Outcome Missions
 export * from "./twin/types.js";
 export * from "./twin/digital-twin-engine.js";
 export * from "./simulation/types.js";
@@ -105,12 +105,23 @@ export * from "./debate/types.js";
 export * from "./debate/dialectic-debate-engine.js";
 export * from "./mission/outcome-mission-engine.js";
 
-// Milestone 14: Economic Intelligence, Engineering Score, Health Model & Adaptive Workflows
+// Phase 14: Economic Intelligence, Engineering Score, Health Model & Adaptive Workflows
 export * from "./economy/types.js";
 export * from "./economy/cost-intelligence.js";
 export * from "./governance/engineering-score.js";
 export * from "./observability/software-health.js";
 export * from "./workforce/marketplace.js";
 export * from "./orchestrator/adaptive-workflow.js";
+
+// Phase 15: Empirical Benchmarking Arena, External Truth Oracles, Analytics & Trust Ledger
+export * from "./benchmark/types.js";
+export * from "./benchmark/comparative-arena.js";
+export * from "./verification/external-oracle.js";
+export * from "./analytics/types.js";
+export * from "./analytics/production-telemetry.js";
+export * from "./analytics/product-analytics.js";
+export * from "./analytics/experimentation-engine.js";
+export * from "./reputation/agent-trust-ledger.js";
+
 
 

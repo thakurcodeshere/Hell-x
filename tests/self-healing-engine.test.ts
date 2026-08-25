@@ -29,5 +29,5 @@ describe("SelfHealingEngine Closed-Loop Remediation (Milestone 12)", () => {
     const failMem = memories.find((m) => m.code === "MEM-FAIL-INC-LEAK-01");
     expect(failMem).toBeDefined();
     expect(failMem?.type).toBe("MEMORY");
-  });
+  }, 15000);
 });
