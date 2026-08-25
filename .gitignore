@@ -3,3 +3,5 @@ dist
 .hellx
 *.log
 .DS_Store
+
+.vercel

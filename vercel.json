@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "name": "hell-x",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/(.*)",
       "destination": "/api"
     }
   ]
