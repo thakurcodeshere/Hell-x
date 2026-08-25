@@ -365,6 +365,22 @@ export function createCli(): Command {
       await runGrandPilotSimulation();
     });
 
+  program
+    .command("simulate-twin")
+    .description("Run Milestone 13 Digital Twin, Blast Radius, Adversarial Red-Team Debate & Outcome Missions simulation")
+    .action(async () => {
+      const { runTwinDebateSimulation } = await import("./simulate-twin-debate.js");
+      await runTwinDebateSimulation();
+    });
+
+  program
+    .command("debate")
+    .description("Trigger an adversarial Red-Team vs Blue-Team dialectic debate on architectural proposals")
+    .action(async () => {
+      const { runTwinDebateSimulation } = await import("./simulate-twin-debate.js");
+      await runTwinDebateSimulation();
+    });
+
   return program;
 }
 

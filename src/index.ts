@@ -95,3 +95,13 @@ export * from "./remediation/types.js";
 export * from "./remediation/rca-engine.js";
 export * from "./remediation/hotfix-synthesizer.js";
 export * from "./remediation/self-healing-engine.js";
+
+// Milestone 13: Digital Twin, Blast Radius, Adversarial Debate & Outcome Missions
+export * from "./twin/types.js";
+export * from "./twin/digital-twin-engine.js";
+export * from "./simulation/types.js";
+export * from "./simulation/blast-radius-simulator.js";
+export * from "./debate/types.js";
+export * from "./debate/dialectic-debate-engine.js";
+export * from "./mission/outcome-mission-engine.js";
+
