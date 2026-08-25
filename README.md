@@ -2,197 +2,398 @@
 
 <div align="center">
 
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Live%20Demo-10b981?style=for-the-badge&logo=vercel&logoColor=white)](https://hell-x.vercel.app)
+[![Local Host](https://img.shields.io/badge/Local%20Host-http%3A%2F%2Flocalhost%3A3000-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](#-12-view-engineering-control-plane-local-host)
 [![GitHub License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![SLSA Level 3](https://img.shields.io/badge/SLSA-Level%203%20Attested-cyan?style=for-the-badge&logo=security)](https://slsa.dev)
 [![Tests Passing](https://img.shields.io/badge/Vitest-85%2F85%20Passed%20(100%25)-emerald?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/thakurcodeshere/Hell-x)
 [![Node Version](https://img.shields.io/badge/Node-%3E%3D20.0.0-f97316?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
+[![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9.3%20Strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
 **Trustworthy Orchestration of Software Engineering Intelligence.**  
 *Transform unstructured human intent into structured, verifiable, self-healing software systems.*
 
-[**Live Web Control Plane**](https://hell-x.vercel.app) • [**10-Layer Stack**](#-the-10-layer-stack-architecture) • [**Domain Entities**](#-foundational-domain-entities--state-models) • [**15 Laws Manifesto**](#-the-engineering-os-manifesto-15-laws) • [**Construction Roadmap**](#-phase-by-phase-construction-plan) • [**CLI Reference**](#-cli-command-center)
+[**Executive Summary**](#-1-executive-summary--core-philosophical-shift) • [**The 15 Laws**](#-2-the-engineering-os-manifesto-15-laws) • [**10-Layer Stack**](#-3-the-10-layer-stack-architecture) • [**UML Diagrams & Domain Entities**](#-4-foundational-domain-entities--state-models-uml) • [**Phase Construction Plan**](#-5-phase-by-phase-construction-plan) • [**CLI Reference**](#-7-cli-command-center) • [**Strategic Horizons**](#-8-strategic-horizons--future-roadmap)
 
 </div>
 
 ---
 
-## ⚡ Executive Summary & Core Philosophical Shift
+## 🏛️ 1. Executive Summary & Core Philosophical Shift
 
-Current AI coding systems (assistants, code generators, chat completions) operate in a shallow, ungrounded conversational loop:
-> **Human:** *"Build me a SaaS application for X."*  
-> **AI:** *Generates requirements $\to$ writes code $\to$ fixes syntax errors $\to$ declares success.*
-
-This approach suffers from **15 fundamental engineering vulnerabilities**:
-1. Vague human intent.
-2. Incomplete requirements.
-3. Hidden assumptions and unstated boundaries.
-4. Architecture synthesized without validation.
-5. Agents modifying files outside their assigned scope.
+### The Fundamental Problem of AI Coding
+Current AI coding tools generate code directly from conversational prompts and evaluate their own correctness:
+```
+Human: "Build me a SaaS app." ──► AI generates code ──► AI fixes errors ──► AI declares success
+```
+This naive paradigm suffers from **15 fundamental engineering vulnerabilities**:
+1. Vague, unanchored human intent.
+2. Incomplete and implicit requirements.
+3. Hidden architectural assumptions.
+4. Unvalidated architecture generation.
+5. Agents breaching bounded worktree domains.
 6. **Agents reviewing and approving their own work (Self-Review Bias).**
-7. Weak, superficial verification without multi-modal proof.
-8. Complete lack of durable engineering memory.
-9. Poor coordination and race conditions between agents.
-10. Repetition of identical past bugs and CVEs.
-11. No formal cryptographic evidence chain.
-12. Rigid processes that ignore risk variance.
-13. No organizational memory across releases.
-14. No measurable agent reputation or benchmark selection.
-15. No post-release closed-loop observability or self-healing.
+7. Weak verification without formal evidence.
+8. Total lack of durable organizational memory.
+9. Poor inter-agent concurrency and task conflict.
+10. Repeated regression mistakes across sessions.
+11. No tamper-proof cryptographic evidence chain.
+12. Static, non-adaptive engineering processes.
+13. No organizational knowledge retention.
+14. No empirical agent reputation scoring.
+15. No continuous post-release closed-loop engineering.
 
-### The Paradigm Shift: From Autonomous Coding to Autonomous Engineering
+### The Paradigm Shift
+**Hell-x is not a prompt collection or a coding copilot. Hell-x is an AI-Native Engineering Operating System.**  
+It enforces a cryptographic, multi-agent workforce governed by deterministic validation gates, independent peer verifiers, continuous 8-tier memory, and closed-loop self-healing remediation.
 
 ```
-Traditional AI Coding (Fragile):
-[ Human Prompt ] ──► [ LLM Generation ] ──► [ Code Output ] ──► [ AI Self-Approval ] (Failure Prone)
-
-Hell-x Engineering OS (Deterministic & Verifiable):
-[ Human Intent ] ──► [ 10D Spec Radar ] ──► [ Engineering Model & ADRs ] ──► [ Topological DAG ]
-                           │
-                           ▼
-                    [ 7 Specialist Worktrees ] ──► [ Claim vs Proof Ledger ]
-                           │
-                           ▼
-                    [ Peer QA Verifier ] ──► [ 6 Governance Gates ] ──► [ SLSA Level 3 Sealing ]
-                           │
-                           ▼
-                    [ Canary Release (10% ➔ 100%) ] ──► [ 8-Tier Memory ] ──► [ Self-Healing Swarm ]
+                      THE CORE PRIMARY PRINCIPLE
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                                                                  │
+ │       NO AGENT IS THE SOLE AUTHORITY OVER ITS OWN OUTPUT.        │
+ │                                                                  │
+ │   The agent that synthesizes an artifact is strictly prohibited   │
+ │   from verifying or approving it. Every claim requires           │
+ │   multi-modal cryptographic proof before gate clearance.         │
+ │                                                                  │
+ └──────────────────────────────────────────────────────────────────┘
 ```
 
-**The objective of Hell-x is not autonomous coding. The objective is autonomous, verifiable engineering.**
+---
+
+## 📜 2. The Engineering OS Manifesto (15 Laws)
+
+* **Law 01 — Intent Precedence**: Intent must precede implementation.
+* **Law 02 — Explicit Requirements**: Requirements must be explicit, testable, and vector-scored.
+* **Law 03 — Visible Unknowns**: Unknowns must remain visible until formally resolved.
+* **Law 04 — Bidirectional Traceability**: Architecture must be traceable down to code, and incidents upstream to source lines.
+* **Law 05 — Agent Boundaries**: Agents must operate strictly within bounded Git worktree sandboxes.
+* **Law 06 — Zero Self-Review**: Builders must never be the verifiers of their own output.
+* **Law 07 — Evidentiary Proof**: Claims require reproducible, cryptographic evidence (`CLAIM != PROOF`).
+* **Law 08 — Risk-Adaptive Depth**: Risk profile determines verification depth and gate strictness.
+* **Law 09 — Human Invariant**: Humans retain multi-sig approval over irreversible, high-risk architectural decisions.
+* **Law 10 — Decision Explainability**: Every engineering decision must be backed by an ADR with tradeoff matrices.
+* **Law 11 — Failure Memory**: Every defect and incident must distill into permanent organizational memory.
+* **Law 12 — Continuous Learning**: Every release must generate telemetry-driven preventative rules.
+* **Law 13 — Meritocratic Selection**: Agents are dynamically assigned based on empirical benchmark reputation.
+* **Law 14 — Adaptive Workflows**: Workflows evolve based on observed execution performance.
+* **Law 15 — Outcome Optimization**: The system optimizes business outcomes, not superficial agent token activity.
 
 ---
 
-## 🏛️ The Primary Principle
+## 🧩 3. The 10-Layer Stack Architecture
 
-> ### **NO AGENT IS THE SOLE AUTHORITY OVER ITS OWN OUTPUT.**
-> The agent that creates an engineering artifact is strictly prohibited from verifying or approving it. Every claim requires multi-modal cryptographic proof.
-> 
-> $$\text{Creator} \longrightarrow \text{Evidence} \longrightarrow \text{Independent Verification} \longrightarrow \text{Gate} \longrightarrow \text{Approval}$$
+```mermaid
+flowchart TD
+    subgraph "Layer 00 — Foundation Substrate"
+        L0_EventBus["SHA-256 EventBus (Append-Only)"]
+        L0_Store["Content-Addressed ArtifactStore (Immutable)"]
+        L0_Sandbox["Git Worktree Sandbox Manager"]
+        L0_Gateway["Multi-LLM Gateway & Cost Router"]
+        L0_Policy["Security Policy Engine"]
+    end
+
+    subgraph "Layer 01 & 02 — Intent & Product Intelligence"
+        L1_Intent["Intent Vector Extractor & Ambiguity Radar"]
+        L2_Radar["10D Completeness Radar"]
+        L2_Conflict["Contradiction & Unknowns Engine"]
+        L2_SpecGate["SPECIFICATION_GATE"]
+    end
+
+    subgraph "Layer 03 & 04 — Blueprint & Architecture"
+        L3_Domain["Domain Modeler & Invariant Rules"]
+        L3_Contracts["OpenAPI 3.1 & SQL DDL Schemas"]
+        L4_ADR["Multi-Option ADR Trade-off Engine"]
+        L4_ArchGate["ARCHITECTURE_GATE"]
+    end
+
+    subgraph "Layer 05 — Design & UX Engine"
+        L5_Tokens["WCAG 2.1 AA Design Tokens"]
+        L5_Screens["Screen Modeler & API Bindings"]
+        L5_State["Interaction State Machine"]
+        L5_DesignGate["DESIGN_GATE"]
+    end
+
+    subgraph "Layer 06 — Workforce Orchestrator"
+        L6_Personas["7 Specialist Personas (gstack & Factory)"]
+        L6_DAG["Topological DAG & Blast Radius Engine"]
+        L6_Peer["Independent Peer Verifier"]
+        L6_ExecGate["EXECUTION_GATE"]
+    end
+
+    subgraph "Layer 07 — Verification & Evidence Network"
+        L7_Ledger["Claim vs. Proof Ledger"]
+        L7_Evidence["Multi-Modal Evidence Collector (SHA-256)"]
+        L7_Mutation["Mutation Testing Engine (>=80% Kill Rate)"]
+        L7_VerifGate["VERIFICATION_GATE"]
+    end
+
+    subgraph "Layer 08 — Release State Machine"
+        L8_Canary["Canary Deployment (10% -> 100%)"]
+        L8_Watchdog["SLI/SLO Telemetry Watchdogs"]
+        L8_Rollback["Sub-Second Fast-Rollback Sentinel"]
+        L8_ReleaseGate["RELEASE_GATE"]
+    end
+
+    subgraph "Layer 09 — Continuous Memory & Learning"
+        L9_Memory["8-Tier Hierarchical Memory Substrate"]
+        L9_Distill["Pattern Distillation & Guardrails"]
+        L9_Reputation["Agent Reputation Ledger"]
+        L9_MemoryGate["MEMORY_GATE"]
+    end
+
+    subgraph "Layer 10 — Closed-Loop Mission Control & Swarm"
+        L10_Mission["Mission Control Closed-Loop Orchestrator"]
+        L10_Refactor["Autonomous Dead-Code & Complexity Refactorer"]
+        L10_Security["Autonomous CVE & Secret Patcher"]
+        L10_Swarm["Swarm Consensus & Self-Healing Incident Remediation"]
+    end
+
+    L0_EventBus --> L1_Intent
+    L0_Store --> L1_Intent
+    L1_Intent --> L2_Radar --> L2_SpecGate
+    L2_SpecGate --> L3_Domain --> L4_ADR --> L4_ArchGate
+    L4_ArchGate --> L5_Tokens --> L5_DesignGate
+    L5_DesignGate --> L6_DAG --> L6_Peer --> L6_ExecGate
+    L6_ExecGate --> L7_Ledger --> L7_Mutation --> L7_VerifGate
+    L7_VerifGate --> L8_Canary --> L8_Rollback --> L8_ReleaseGate
+    L8_ReleaseGate --> L9_Memory --> L9_Distill --> L9_MemoryGate
+    L9_MemoryGate --> L10_Mission --> L10_Swarm
+```
 
 ---
 
-## 🏗️ The 10-Layer Stack Architecture
+## 📐 4. Foundational Domain Entities & State Models (UML)
 
-Hell-x organizes software engineering intelligence into a unified 10-layer substrate with a continuous post-release learning feedback loop:
+### A. Core Artifact Entity Model (UML Class Diagram)
 
-<div align="center">
-  <img src="docs/assets/10-layer-stack-architecture.png" alt="Hell-x 10-Layer Stack Architecture" width="380"/>
-</div>
+```mermaid
+classDiagram
+    class BaseArtifact {
+        +string id
+        +string code
+        +string type
+        +number version
+        +string createdAt
+        +string authorId
+        +string authorRole
+        +string[] dependencies
+        +string[] tags
+        +boolean immutable
+    }
 
-### Detailed Layer Breakdown
+    class RequirementArtifact {
+        +string category
+        +string statement
+        +string[] acceptanceCriteria
+        +string completenessRadarScore
+        +boolean ambiguityResolved
+    }
 
-| Layer | System Component | Core Responsibility |
-| :--- | :--- | :--- |
-| **Layer 01** | **Intent Engine** | Converts natural language goals into structured intent vectors, extracting actors, constraints, and success criteria. |
-| **Layer 02** | **Product Intelligence** | Computes 10-dimensional requirement completeness, contradiction detection, and unstated assumptions. |
-| **Layer 03** | **Engineering Model** | Synthesizes domain models, invariant business rules, and technical boundary contracts. |
-| **Layer 04** | **Architecture Engine & ADRs** | Generates multi-option tradeoff matrices, OpenAPI 3.1 specs, and relational SQL DDL schemas. |
-| **Layer 05** | **Orchestration & Dependency Graph** | Computes topological parallel task DAGs, execution tiers, cycle detection, and blast radius calculation. |
-| **Layer 06** | **Workforce & Reputation Engine** | 7 Specialist Personas (`PM`, `ARCHITECT`, `DESIGNER`, `BACKEND`, `FRONTEND`, `QA`, `SRE`) with dynamic reputation scores. |
-| **Layer 07** | **Execution Sandbox & Worktrees** | Dispatches work into isolated Git worktree sandboxes with least-privilege file access policies. |
-| **Layer 08** | **Verification Network & Evidence** | Collects SHA-256 sealed multi-modal evidence (unit, mutation, security, browser traces). |
-| **Layer 09** | **Governance & Machine Policies** | Enforces 6 strict Governance Gates (`SPEC`, `ARCH`, `DESIGN`, `EXEC`, `VERIF`, `RELEASE`) + Multi-Sig authorization. |
-| **Layer 10** | **Learning & Digital Twin** | 8-Tier hierarchical memory substrate, pattern distillation, and autonomous self-healing incident remediation. |
+    class ADRArtifact {
+        +string title
+        +string context
+        +ADROption[] evaluatedOptions
+        +string chosenOption
+        +string rationale
+        +string blastRadius
+    }
+
+    class TaskNodeArtifact {
+        +string title
+        +string targetRole
+        +string targetWorktreePath
+        +string status
+        +string[] inputArtifactCodes
+        +string[] outputArtifactCodes
+    }
+
+    class EvidenceArtifact {
+        +string evidenceType
+        +string targetRequirementCode
+        +object rawPayload
+        +string reproducibleCommand
+        +boolean verifiedPassed
+        +string verifierAgentId
+        +string verifierSignature
+    }
+
+    class GateDecisionArtifact {
+        +string gateType
+        +string status
+        +string[] evaluatedRequirements
+        +string[] attachedEvidenceIds
+        +string approvedByActorId
+        +string approvedByActorType
+        +string justification
+    }
+
+    class MemoryArtifact {
+        +string category
+        +string summary
+        +string lessonLearned
+        +string preventativeRule
+        +string[] applicableContext
+        +number reinforcementScore
+    }
+
+    BaseArtifact <|-- RequirementArtifact
+    BaseArtifact <|-- ADRArtifact
+    BaseArtifact <|-- TaskNodeArtifact
+    BaseArtifact <|-- EvidenceArtifact
+    BaseArtifact <|-- GateDecisionArtifact
+    BaseArtifact <|-- MemoryArtifact
+```
 
 ---
 
-## 📐 Foundational Domain Entities & State Models
+### B. Master Engineering Governance Sequence (UML Sequence Diagram)
 
-Every concept in Hell-x is represented by a strictly typed, immutable, content-addressed domain artifact:
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as Human Lead
+    participant PM as Product Manager Agent
+    participant SpecGate as SPECIFICATION_GATE
+    participant Arch as System Architect Agent
+    participant ArchGate as ARCHITECTURE_GATE
+    participant Worker as Backend/Frontend Specialist
+    participant QA as Independent QA Verifier
+    participant VerifGate as VERIFICATION_GATE
+    participant SRE as SRE / Release Manager
+    participant RelGate as RELEASE_GATE
+    participant Memory as 8-Tier Memory Substrate
 
-<div align="center">
-  <img src="docs/assets/foundational-domain-entities.png" alt="Hell-x Foundational Domain Entities & State Models" width="380"/>
-</div>
+    User->>PM: 1. Natural Language Intent ("Build Billing API")
+    PM->>PM: 2. Vector Extraction & 10D Radar Scoring
+    PM->>SpecGate: 3. Submit Evaluated Requirements
+    SpecGate-->>Arch: 4. SPECIFICATION_GATE Passed
+    Arch->>Arch: 5. Domain Modeling & Multi-Option ADRs
+    Arch->>ArchGate: 6. Submit OpenAPI 3.1 & SQL DDL
+    ArchGate-->>Worker: 7. ARCHITECTURE_GATE Passed
+    Worker->>Worker: 8. Implement Code in Isolated Worktree
+    Worker->>QA: 9. Emit CLAIM ("Feature Implemented")
+    QA->>QA: 10. Run Unit, Integration & Mutation Tests (>=80%)
+    QA->>VerifGate: 11. Submit Signed SHA-256 Evidence
+    VerifGate-->>SRE: 12. VERIFICATION_GATE Passed
+    SRE->>SRE: 13. Canary Rollout (10% -> 25% -> 50% -> 100%)
+    SRE->>RelGate: 14. Telemetry SLO Check & SLSA Sealing
+    RelGate-->>Memory: 15. RELEASE_GATE Passed & Production Deployed
+    Memory->>Memory: 16. Distill Preventative Rules into Permanent Memory
+```
 
-### State Machine Lifecycle
+---
+
+### C. Task Lifecycle State Machine (UML State Machine Diagram)
 
 ```mermaid
 stateDiagram-v2
-    [*] --> INTENT_SUBMITTED
-    INTENT_SUBMITTED --> SPEC_ANALYZED: 10D Radar Evaluated
-    SPEC_ANALYZED --> ARCH_BLUEPRINTED: Domain & ADRs Generated
-    ARCH_BLUEPRINTED --> TASKS_SCHEDULED: Topological DAG Tiered
-    TASKS_SCHEDULED --> WORKTREE_DISPATCHED: Isolated Git Sandbox
-    WORKTREE_DISPATCHED --> EVIDENCE_COLLECTED: Tests & Proof Generated
-    EVIDENCE_COLLECTED --> PEER_VERIFIED: Independent QA Attested
-    PEER_VERIFIED --> GATE_PASSED: 6/6 Gates Cryptographically Passed
-    GATE_PASSED --> CANARY_DEPLOYED: Canary 10% ➔ 100%
-    CANARY_DEPLOYED --> MEMORY_DISTILLED: 8-Tier Memory Updated
-    MEMORY_DISTILLED --> [*]
+    [*] --> DECOMPOSED: Task Created by DAG Engine
+    DECOMPOSED --> DISPATCHED: Worktree Allocated
+    DISPATCHED --> EXECUTING: Worker Assigned
+    EXECUTING --> CLAIMED: Builder Emits Code & Claim
+    
+    state "Independent Peer Review" as Review {
+        CLAIMED --> PEER_REVIEW: Dispatch to Independent QA
+        PEER_REVIEW --> EVIDENCE_COLLECTED: Run Verification Suite
+        EVIDENCE_COLLECTED --> MUTATION_TESTING: Evaluate >=80% Kill Rate
+    }
+
+    MUTATION_TESTING --> VERIFIED: Proof Reconciled
+    MUTATION_TESTING --> FLAKINESS_QUARANTINE: Non-Deterministic Behavior
+    MUTATION_TESTING --> REJECTED: Test / Proof Failure
+    
+    FLAKINESS_QUARANTINE --> EXECUTING: Re-assign with Failure Context
+    REJECTED --> EXECUTING: Synthesize Fix
+    
+    VERIFIED --> MERGED: Gate Approved & Worktree Merged
+    MERGED --> [*]
 ```
 
-### Core Entity Schema Definitions
+---
 
-1. **`Requirement` (`REQ-*`)**:
-   - `reqId`, `objective`, `actor`, `preconditions`, `acceptanceCriteria`, `riskLevel` (`LOW` | `MEDIUM` | `HIGH` | `CRITICAL`), `completenessScore` ($0.0 - 1.0$).
-2. **`ArchitectureDecision` (`ADR-*`)**:
-   - `adrId`, `decision`, `alternatives` (Multi-option trade-off matrix), `justification`, `affectedReqs`.
-3. **`TaskNode` (`TASK-*`)**:
-   - `taskId`, `reqId`, `dependencies`, `roleRequired` (Specialist Persona), `isolation` (`WORKTREE_ISOLATED`), `status` (`READY` | `ASSIGNED` | `EXECUTING` | `VERIFIED` | `FAILED`).
-4. **`EvidenceObject` (`EVID-*`)**:
-   - `evidenceId`, `taskId`, `reqId`, `type` (`UNIT_TEST`, `MUTATION_KILL`, `SAST_SECURITY`, `BROWSER_TRACE`), `rawPayload`, `sha256Hash`, `verifierSignature`.
-5. **`GateDecision` (`GATE-*`)**:
-   - `gateId`, `gateType` (`SPEC_GATE`, `ARCH_GATE`, `DESIGN_GATE`, `EXEC_GATE`, `VERIF_GATE`, `RELEASE_GATE`), `requiredEvidence`, `passed` (Boolean), `signedBy`.
-6. **`MemoryArtifact` (`MEM-*`)**:
-   - `category` (`PRODUCT`, `ARCHITECTURAL`, `DESIGN`, `FAILURE`, `AGENT_REPUTATION`, `OPERATIONAL`, `SECURITY`, `PROCESS`), `summary`, `lessonLearned`, `preventativeRule`, `reinforcementScore`.
+### D. Zero-Downtime Canary Rollout State Machine (UML State Machine)
+
+```mermaid
+stateDiagram-v2
+    [*] --> GATE_APPROVED: 6 Governance Gates Cleared
+    GATE_APPROVED --> CANARY_10: Route 10% Production Traffic
+    
+    CANARY_10 --> CANARY_25: Telemetry SLO Healthy (P99 < 100ms, Errors < 0.01%)
+    CANARY_25 --> CANARY_50: Telemetry SLO Healthy
+    CANARY_50 --> FULL_PROMOTION: Full 100% Traffic Promotion
+    
+    CANARY_10 --> FAST_ROLLBACK: Telemetry Anomaly Detected (<1s)
+    CANARY_25 --> FAST_ROLLBACK: Telemetry Anomaly Detected (<1s)
+    CANARY_50 --> FAST_ROLLBACK: Telemetry Anomaly Detected (<1s)
+    
+    FAST_ROLLBACK --> POST_MORTEM_MEMORY: Store Failure Memory
+    POST_MORTEM_MEMORY --> [*]
+    FULL_PROMOTION --> RELEASE_SEALED: Generate SLSA Level 3 Provenance
+    RELEASE_SEALED --> [*]
+```
 
 ---
 
-## 📜 The Engineering OS Manifesto (15 Laws)
+### E. Autonomous Swarm Consensus & Self-Healing Protocol (UML Diagram)
 
-1. **Law 01 — Intent Precedence**: Intent must precede implementation.
-2. **Law 02 — Explicit Requirements**: Requirements must be explicit, testable, and vector-scored.
-3. **Law 03 — Visible Unknowns**: Unknowns must remain visible until formally resolved.
-4. **Law 04 — Bidirectional Traceability**: Architecture must trace to requirements, and production incidents upstream to source lines.
-5. **Law 05 — Agent Boundaries**: Agents must operate strictly within bounded Git worktree sandboxes.
-6. **Law 06 — Zero Self-Review**: Builders must never be the verifiers of their own output.
-7. **Law 07 — Evidentiary Proof**: Claims require reproducible, cryptographic evidence.
-8. **Law 08 — Risk-Adaptive Depth**: Risk profile determines verification depth.
-9. **Law 09 — Human Invariant**: Humans retain multi-sig approval over irreversible, high-risk architectural decisions.
-10. **Law 10 — Decision Explainability**: Every engineering decision must be backed by an ADR with tradeoff matrices.
-11. **Law 11 — Failure Memory**: Every defect and incident must distill into permanent organizational memory.
-12. **Law 12 — Continuous Learning**: Every release must generate telemetry-driven preventative rules.
-13. **Law 13 — Meritocratic Selection**: Agents are dynamically assigned based on empirical benchmark reputation.
-14. **Law 14 — Adaptive Workflows**: Workflows evolve based on observed execution performance.
-15. **Law 15 — Outcome Optimization**: The system optimizes business outcomes, not superficial agent token activity.
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Telemetry as Telemetry / SLO Watchdog
+    participant RCA as Root Cause Analyzer (RCA)
+    participant Swarm as Swarm Coordinator
+    participant Synth as Hotfix AST Synthesizer
+    participant Signer as Cryptographic Proof Signer
+    participant Canary as Canary Rollout Engine
+    participant Memory as Failure Memory Distiller
 
----
-
-## 🚀 Phase-by-Phase Construction Plan
-
-| Phase / Milestone | Status | Key Deliverables |
-| :--- | :---: | :--- |
-| **Phase 0: Foundation Substrate** | 🟢 **Complete** | SHA-256 EventBus, Content-Addressed ArtifactStore, Git Sandboxes, AI Gateway, Policy Engine. |
-| **Phase 1: Intent $\to$ Specification** | 🟢 **Complete** | Intent Vector Extractor, 10D Completeness Radar, Contradiction Engine, `SPECIFICATION_GATE`. |
-| **Phase 2: Specification $\to$ Blueprint** | 🟢 **Complete** | Domain Modeler, Multi-Option ADRs, OpenAPI 3.1 & SQL DDL, Topological DAG, `ARCHITECTURE_GATE`. |
-| **Phase 3: Design & UX Engine** | 🟢 **Complete** | WCAG 2.1 AA Tokens, Interaction State Machines, Screen Modeler, `DESIGN_GATE`. |
-| **Phase 4: Workforce Orchestrator** | 🟢 **Complete** | 7 Specialist Personas, Context Packs, Worktree Dispatcher, Peer Verifier, `EXECUTION_GATE`. |
-| **Phase 5: Verification Network** | 🟢 **Complete** | Cryptographic Evidence Collector, Claim-vs-Proof Ledger, Flakiness Quarantine, Mutation Testing ($\ge 80\%$). |
-| **Phase 6: Release Engine** | 🟢 **Complete** | Deployment State Machine, Canary 10% $\to$ 100%, SLI/SLO Watchdogs, Sub-Second Rollback, `RELEASE_GATE`. |
-| **Phase 7: Continuous Memory** | 🟢 **Complete** | 8-Tier Hierarchical Memory Substrate, Telemetry Trace Spans, Pattern Distillation, `MEMORY_GATE`. |
-| **Phase 8: Mission Control Closed Loop** | 🟢 **Complete** | Autonomous Mission Orchestrator, Dead-Code Elimination, Automated CVE/Secret Patcher. |
-| **Milestone 9: Live Providers & CI/CD** | 🟢 **Complete** | Live Multi-LLM Adapters (OpenAI, Anthropic, Gemini, Ollama), GitHub PR Syncer, Webhook Driver. |
-| **Milestone 10: Web Dashboard & Server** | 🟢 **Complete** | Zero-dependency native HTTP/SSE REST server and 12-View Engineering Control Plane. |
-| **Milestone 11: Enterprise Security** | 🟢 **Complete** | Cryptographic Attestation Signer, SLSA Level 3 Provenance Engine, Merkle Ledger, Multi-Sig Gates. |
-| **Milestone 12: Autonomous Swarm & Self-Healing** | 🟢 **Complete** | Multi-Agent Swarm Protocol, Automated RCA Engine, Hotfix Synthesizer, Continuous Self-Healing. |
+    Telemetry->>RCA: 1. Incident Alert (SQL Injection / P99 Spike)
+    RCA->>RCA: 2. Pinpoint File, Line & Defect Category (>95% Conf)
+    RCA->>Swarm: 3. Submit Remediation Proposal
+    Swarm->>Swarm: 4. Distributed Quorum Consensus (>=66% Approvals)
+    Swarm->>Synth: 5. Consensus Approved: Trigger Hotfix Synthesis
+    Synth->>Synth: 6. Synthesize Unified Diff & Mutation Fixture
+    Synth->>Signer: 7. Independent Attestation & SLSA Provenance
+    Signer->>Canary: 8. Zero-Downtime Canary Promotion (10% -> 100%)
+    Canary->>Memory: 9. Distill Preventative Rule into Permanent Context
+```
 
 ---
 
-## 🛠️ Technical Stack for the Hell-x Substrate
+## 🛠️ 5. Phase-by-Phase Construction Plan
 
-- **Runtime & Language**: Node.js `>= 20.0.0`, TypeScript `5.9.3` (Native ESM, Strict Null Checks).
-- **Core Cryptography**: Node.js `crypto` (SHA-256 HMAC, RSA-2048 keypairs, in-toto attestation formats).
-- **Schema Contracts**: `zod` 3.24+ runtime data invariant validation.
-- **Testing & Verification**: `vitest` 3.2+ (85 / 85 unit and integration tests across 56 test files).
-- **CLI & Formatting**: `commander`, `chalk`, `ora`.
-- **Serverless & Web Dashboard**: Single Page Application, Tailwind CSS Dark Theme, Vercel Serverless Function runtime (`/api/*`).
+Hell-x was built systematically across 12 milestones (Phases 0 through 8 foundational operating system + Milestones 9 through 12 enterprise extensions):
+
+| Phase / Milestone | Name | Core Components Constructed | Verification Standard |
+| :--- | :--- | :--- | :---: |
+| **Phase 0** | **Foundation Substrate** | SHA-256 EventBus, Content-Addressed ArtifactStore, Git Worktrees, Model Gateway, Policy Engine. | 15 / 15 Tests Passed |
+| **Phase 1** | **Intent $\to$ Specification** | Intent Vectorizer, 10D Completeness Radar, Contradiction Engine, `SPECIFICATION_GATE`. | 8 / 8 Tests Passed |
+| **Phase 2** | **Specification $\to$ Blueprint** | Domain Modeler, Multi-Option ADRs, OpenAPI 3.1 & SQL DDL, Topological DAG, `ARCHITECTURE_GATE`. | 7 / 7 Tests Passed |
+| **Phase 3** | **Design Engine & UX Loop** | WCAG 2.1 AA Tokens, Interaction State Machines, Screen Modeler, `DESIGN_GATE`. | 9 / 9 Tests Passed |
+| **Phase 4** | **Workforce Orchestration** | 7 Specialist Personas, Context Packs, Worktree Dispatcher, Peer Verifier, `EXECUTION_GATE`. | 7 / 7 Tests Passed |
+| **Phase 5** | **Verification Network** | Evidence Collector, Claim-Proof Ledger, Flakiness Quarantine, Mutation Testing ($\ge 80\%$), `VERIFICATION_GATE`. | 7 / 7 Tests Passed |
+| **Phase 6** | **Release State Machine** | Canary 10% $\to$ 100%, SLI/SLO Watchdogs, Sub-Second Fast-Rollback, `RELEASE_GATE`. | 5 / 5 Tests Passed |
+| **Phase 7** | **Continuous Memory** | 8-Tier Memory Substrate, Telemetry Trace Spans, Pattern Distillation, Agent Reputation, `MEMORY_GATE`. | 5 / 5 Tests Passed |
+| **Phase 8** | **Mission Control Closed Loop** | Autonomous Mission Orchestrator, Dead-Code Elimination & Complexity Refactorer, Automated CVE Patcher. | 3 / 3 Tests Passed |
+| **Milestone 9** | **Live Multi-LLM & CI/CD** | `OpenAIAdapter`, `AnthropicAdapter`, `GeminiAdapter`, `OllamaAdapter`, `GitHubPRSyncer`, `WebhookDriver`. | 6 / 6 Tests Passed |
+| **Milestone 10** | **Mission Control Web Server** | Native Node.js HTTP Server, REST API (`/api/v1/*`), 12-View Engineering Control Plane Dashboard. | 5 / 5 Tests Passed |
+| **Milestone 11** | **Enterprise Security & SLSA** | RSA-2048 / SHA-256 `AttestationSigner`, in-toto SLSA Level 3 Engine, Merkle Ledger, Multi-Sig Gates. | 4 / 4 Tests Passed |
+| **Milestone 12** | **The Grand Capstone: Swarm** | `SwarmCoordinator` (66% Quorum), `RootCauseAnalyzer`, `HotfixSynthesizer`, `SelfHealingEngine`. | 4 / 4 Tests Passed |
+| **Total** | **Full Engineering OS** | **56 Test Files, 85 Automated Suites, Zero Failures** | 🟢 **100% Passed** |
 
 ---
 
-## 💻 12-View Engineering Control Plane (Live on Vercel)
+## 💻 6. 12-View Engineering Control Plane (Local Host)
 
-Visit the live production dashboard at [**https://hell-x.vercel.app**](https://hell-x.vercel.app):
+Hell-x includes an embedded, native zero-dependency **Engineering Control Plane Web Dashboard**.
+
+### Launching Mission Control Locally
+```bash
+# Start native HTTP server with live REST API & Web Dashboard
+npx tsx src/cli/index.ts serve --port 3000
+```
+Open your browser at [**http://localhost:3000**](http://localhost:3000).
 
 ```text
 ├── 01 — Command Center      (5 Fundamental Questions HUD, Velocity, Health & Mission Launchpad)
@@ -211,11 +412,39 @@ Visit the live production dashboard at [**https://hell-x.vercel.app**](https://h
 
 ---
 
-## 🔮 Strategic Horizons
+## ⌨️ 7. CLI Command Center
 
-1. **Outcome-Based Autonomous Missions**: Users specify high-level business goals (e.g. *"Reduce P99 latency by 40% under 5k RPS without exceeding $200/mo infrastructure cost"*). Hell-x designs, experiments, validates, and deploys autonomously.
-2. **Decentralized Agent Marketplace**: Interchangeable, benchmark-rated specialist models selected dynamically based on empirical track records.
-3. **Hardware Enclave Attestation**: Sealing SLSA Level 3 provenance inside AMD SEV / AWS Nitro Enclaves for verifiable confidential computing.
+Hell-x provides a comprehensive command line interface (`hellx`):
+
+```bash
+# 1. Execute an autonomous closed-loop engineering mission
+npx tsx src/cli/index.ts mission "Build Enterprise Multi-Tenant Subscription and Automated Invoicing Engine"
+
+# 2. Run the Grand Capstone Swarm & Autonomous Self-Healing Simulation
+npx tsx src/cli/index.ts simulate-grand-pilot
+
+# 3. Run the Enterprise Security, SLSA Level 3 & Multi-Sig Gate Simulation
+npx tsx src/cli/index.ts simulate-enterprise
+
+# 4. Inspect active multi-agent swarm topologies and consensus votes
+npx tsx src/cli/index.ts swarm
+
+# 5. Start the local Mission Control Web Server
+npx tsx src/cli/index.ts serve --port 3000
+
+# 6. Run the complete automated test suite (85 tests)
+npm test
+```
+
+---
+
+## 🔮 8. Strategic Horizons & Future Roadmap
+
+* **Section 42 — Autonomous Engineering Missions**: Transition from task-based dispatching to high-level outcome-based missions (*"Improve checkout conversion by 8% without increasing latency beyond 50ms"*).
+* **Section 43 — Engineering Capability Marketplace**: Pluggable, specialized agent micro-capabilities with dynamic benchmark selection.
+* **Section 44 — Benchmark-Driven Agent Economy**: Token-economic efficiency tracking calculating true cost per verified requirement.
+* **Section 45 — Self-Designing Adaptive Workflows**: Workflows dynamically adjust graph topology and gate strictness based on project risk profiles.
+* **Section 46 — Universal Self-Healing Software**: Automated sub-second incident remediation and continuous organizational learning.
 
 ---
 
