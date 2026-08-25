@@ -381,6 +381,22 @@ export function createCli(): Command {
       await runTwinDebateSimulation();
     });
 
+  program
+    .command("simulate-economy")
+    .description("Run Milestone 14 Cost Intelligence, 11D Engineering Score, Health Model & Adaptive Workflows")
+    .action(async () => {
+      const { runEconomyScoringSimulation } = await import("./simulate-economy-scoring.js");
+      await runEconomyScoringSimulation();
+    });
+
+  program
+    .command("score")
+    .description("Calculate comprehensive 11-dimensional evidence-linked engineering score")
+    .action(async () => {
+      const { runEconomyScoringSimulation } = await import("./simulate-economy-scoring.js");
+      await runEconomyScoringSimulation();
+    });
+
   return program;
 }
 

@@ -105,3 +105,12 @@ export * from "./debate/types.js";
 export * from "./debate/dialectic-debate-engine.js";
 export * from "./mission/outcome-mission-engine.js";
 
+// Milestone 14: Economic Intelligence, Engineering Score, Health Model & Adaptive Workflows
+export * from "./economy/types.js";
+export * from "./economy/cost-intelligence.js";
+export * from "./governance/engineering-score.js";
+export * from "./observability/software-health.js";
+export * from "./workforce/marketplace.js";
+export * from "./orchestrator/adaptive-workflow.js";
+
+
