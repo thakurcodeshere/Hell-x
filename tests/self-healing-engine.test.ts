@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { SelfHealingEngine } from "../src/remediation/self-healing-engine.js";
 import { EngineeringOS } from "../src/core/engine.js";
 
-describe("SelfHealingEngine Closed-Loop Remediation (Milestone 12)", () => {
-  it("executes end-to-end self-healing remediation from incident report", async () => {
+describe("SelfHealingEngine Closed-Loop Remediation (Phase 12 — Step 08 Tiered)", () => {
+  it("executes end-to-end self-healing with explicit MTTR scope and autonomy tier", async () => {
     const os = new EngineeringOS();
     await os.initialize();
 
@@ -19,8 +19,11 @@ describe("SelfHealingEngine Closed-Loop Remediation (Milestone 12)", () => {
     });
 
     expect(result.success).toBe(true);
-    expect(result.canaryPromotionPercentage).toBe(100);
-    expect(result.mutationKillScore).toBe(88);
+    // CRITICAL → L2 PREPARE_PATCH — no canary auto-promotion
+    expect(result.canaryPromotionPercentage).toBe(0);
+    expect(result.autonomyLevelUsed).toBe(2);
+    expect(result.humanApprovalRequired).toBe(true);
+    expect(result.mttrScope).toBe("MTTR_SIMULATION");
     expect(result.slsaProvenanceHash.length).toBe(64);
     expect(result.distilledRuleCode).toContain("RULE-PREVENT-SECRET_LEAK");
 
@@ -31,3 +34,4 @@ describe("SelfHealingEngine Closed-Loop Remediation (Milestone 12)", () => {
     expect(failMem?.type).toBe("MEMORY");
   }, 15000);
 });
+
