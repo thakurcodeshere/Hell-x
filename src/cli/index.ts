@@ -343,7 +343,7 @@ export function createCli(): Command {
 
   program
     .command("simulate-enterprise")
-    .description("Run the Milestone 11 Enterprise Security, SLSA Attestation & Multi-Sig Gate simulation")
+    .description("Run the Phase 11 Enterprise Security, SLSA Attestation & Multi-Sig Gate simulation")
     .action(async () => {
       const { runEnterpriseSimulation } = await import("./simulate-enterprise.js");
       await runEnterpriseSimulation();
@@ -351,7 +351,7 @@ export function createCli(): Command {
 
   program
     .command("simulate-grand-pilot")
-    .description("Run the Milestone 12 Grand Capstone Swarm & Autonomous Self-Healing simulation")
+    .description("Run the Phase 12 Grand Capstone Swarm & Autonomous Self-Healing simulation")
     .action(async () => {
       const { runGrandPilotSimulation } = await import("./simulate-grand-pilot.js");
       await runGrandPilotSimulation();
@@ -367,7 +367,7 @@ export function createCli(): Command {
 
   program
     .command("simulate-twin")
-    .description("Run Milestone 13 Digital Twin, Blast Radius, Adversarial Red-Team Debate & Outcome Missions simulation")
+    .description("Run Phase 13 Digital Twin, Blast Radius, Adversarial Red-Team Debate & Outcome Missions simulation")
     .action(async () => {
       const { runTwinDebateSimulation } = await import("./simulate-twin-debate.js");
       await runTwinDebateSimulation();
@@ -383,7 +383,7 @@ export function createCli(): Command {
 
   program
     .command("simulate-economy")
-    .description("Run Milestone 14 Cost Intelligence, 11D Engineering Score, Health Model & Adaptive Workflows")
+    .description("Run Phase 14 Cost Intelligence, 11D Engineering Score, Health Model & Adaptive Workflows")
     .action(async () => {
       const { runEconomyScoringSimulation } = await import("./simulate-economy-scoring.js");
       await runEconomyScoringSimulation();

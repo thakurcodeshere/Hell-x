@@ -1,6 +1,6 @@
 /**
  * Hell-x: The AI-Native Operating System for Software Engineering
- * Milestone 14 Simulation: Cost Intelligence, 11D Engineering Score, Health Sentinel & Adaptive Workflows
+ * Phase 14 Simulation: Cost Intelligence, 11D Engineering Score, Health Sentinel & Adaptive Workflows
  */
 
 import chalk from "chalk";
@@ -13,7 +13,7 @@ import { AdaptiveWorkflowEngine } from "../orchestrator/adaptive-workflow.js";
 
 export async function runEconomyScoringSimulation(): Promise<boolean> {
   console.log(chalk.bold.hex("#10b981")("\n========================================================================================="));
-  console.log(chalk.bold.hex("#10b981")(" 💎 HELL-X OS — MILESTONE 14: ECONOMIC INTELLIGENCE, SCORING & ADAPTIVE WORKFLOWS 💎 "));
+  console.log(chalk.bold.hex("#10b981")(" 💎 HELL-X OS — PHASE 14: ECONOMIC INTELLIGENCE, SCORING & ADAPTIVE WORKFLOWS 💎 "));
   console.log(chalk.bold.hex("#10b981")("=========================================================================================\n"));
 
   const os = new EngineeringOS();

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Local Host](https://img.shields.io/badge/Local%20Host-http%3A%2F%2Flocalhost%3A3000-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](#-12-view-engineering-control-plane-local-host)
+[![Local Host](https://img.shields.io/badge/Local%20Host-http%3A%2F%2Flocalhost%3A3000-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](#-6-12-view-engineering-control-plane-local-host)
 [![GitHub License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![SLSA Level 3](https://img.shields.io/badge/SLSA-Level%203%20Attested-cyan?style=for-the-badge&logo=security)](https://slsa.dev)
 [![Tests Passing](https://img.shields.io/badge/Vitest-94%2F94%20Passed%20(100%25)-emerald?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/thakurcodeshere/Hell-x)
@@ -12,7 +12,7 @@
 **Trustworthy Orchestration of Software Engineering Intelligence.**  
 *Transform unstructured human intent into structured, verifiable, self-healing software systems.*
 
-[**Executive Summary**](#-1-executive-summary--core-philosophical-shift) • [**The 15 Laws**](#-2-the-engineering-os-manifesto-15-laws) • [**10-Layer Stack**](#-3-the-10-layer-stack-architecture) • [**UML Diagrams & Domain Entities**](#-4-foundational-domain-entities--state-models-uml) • [**Phase Construction Plan**](#-5-phase-by-phase-construction-plan) • [**CLI Reference**](#-7-cli-command-center) • [**Strategic Horizons**](#-8-strategic-horizons--future-roadmap)
+[**Executive Summary**](#-1-executive-summary--core-philosophical-shift) • [**The 15 Laws**](#-2-the-engineering-os-manifesto-15-laws) • [**10-Layer Stack**](#-3-the-10-layer-stack-architecture) • [**Complete UML Diagram Suite**](#-4-complete-uml-diagram-suite--domain-models) • [**Phase-by-Phase Plan**](#-5-phase-by-phase-construction-plan-phases-0-14) • [**CLI Reference**](#-7-cli-command-center) • [**Strategic Horizons**](#-8-strategic-horizons--future-roadmap)
 
 </div>
 
@@ -85,7 +85,7 @@ It enforces a cryptographic, multi-agent workforce governed by deterministic val
 
 ```mermaid
 flowchart TD
-    subgraph "Layer 00 — Foundation Substrate"
+    subgraph "Layer 00 — Foundation Substrate (Phase 0)"
         L0_EventBus["SHA-256 EventBus (Append-Only)"]
         L0_Store["Content-Addressed ArtifactStore (Immutable)"]
         L0_Sandbox["Git Worktree Sandbox Manager"]
@@ -93,56 +93,56 @@ flowchart TD
         L0_Policy["Security Policy Engine"]
     end
 
-    subgraph "Layer 01 & 02 — Intent & Product Intelligence"
+    subgraph "Layer 01 & 02 — Intent & Product Intelligence (Phase 1)"
         L1_Intent["Intent Vector Extractor & Ambiguity Radar"]
         L2_Radar["10D Completeness Radar"]
         L2_Conflict["Contradiction & Unknowns Engine"]
         L2_SpecGate["SPECIFICATION_GATE"]
     end
 
-    subgraph "Layer 03 & 04 — Blueprint & Architecture"
+    subgraph "Layer 03 & 04 — Blueprint & Architecture (Phase 2)"
         L3_Domain["Domain Modeler & Invariant Rules"]
         L3_Contracts["OpenAPI 3.1 & SQL DDL Schemas"]
         L4_ADR["Multi-Option ADR Trade-off Engine"]
         L4_ArchGate["ARCHITECTURE_GATE"]
     end
 
-    subgraph "Layer 05 — Design & UX Engine"
+    subgraph "Layer 05 — Design & UX Engine (Phase 3)"
         L5_Tokens["WCAG 2.1 AA Design Tokens"]
         L5_Screens["Screen Modeler & API Bindings"]
         L5_State["Interaction State Machine"]
         L5_DesignGate["DESIGN_GATE"]
     end
 
-    subgraph "Layer 06 — Workforce Orchestrator"
+    subgraph "Layer 06 — Workforce Orchestrator (Phase 4)"
         L6_Personas["7 Specialist Personas (gstack & Factory)"]
         L6_DAG["Topological DAG & Blast Radius Engine"]
         L6_Peer["Independent Peer Verifier"]
         L6_ExecGate["EXECUTION_GATE"]
     end
 
-    subgraph "Layer 07 — Verification & Evidence Network"
+    subgraph "Layer 07 — Verification & Evidence Network (Phase 5)"
         L7_Ledger["Claim vs. Proof Ledger"]
         L7_Evidence["Multi-Modal Evidence Collector (SHA-256)"]
         L7_Mutation["Mutation Testing Engine (>=80% Kill Rate)"]
         L7_VerifGate["VERIFICATION_GATE"]
     end
 
-    subgraph "Layer 08 — Release State Machine"
+    subgraph "Layer 08 — Release State Machine (Phase 6)"
         L8_Canary["Canary Deployment (10% -> 100%)"]
         L8_Watchdog["SLI/SLO Telemetry Watchdogs"]
         L8_Rollback["Sub-Second Fast-Rollback Sentinel"]
         L8_ReleaseGate["RELEASE_GATE"]
     end
 
-    subgraph "Layer 09 — Continuous Memory & Learning"
+    subgraph "Layer 09 — Continuous Memory & Learning (Phase 7)"
         L9_Memory["8-Tier Hierarchical Memory Substrate"]
         L9_Distill["Pattern Distillation & Guardrails"]
         L9_Reputation["Agent Reputation Ledger"]
         L9_MemoryGate["MEMORY_GATE"]
     end
 
-    subgraph "Layer 10 — Closed-Loop Mission Control, Swarm & Economics"
+    subgraph "Layer 10 — Closed-Loop Mission Control, Swarm & Economics (Phase 8-14)"
         L10_Mission["Mission Control Closed-Loop Orchestrator"]
         L10_Twin["Engineering Digital Twin & Blast Radius Simulator"]
         L10_Debate["Adversarial Red-Team / Blue-Team Dialectic Debate"]
@@ -164,9 +164,9 @@ flowchart TD
 
 ---
 
-## 📐 4. Foundational Domain Entities & State Models (UML)
+## 📐 4. Complete UML Diagram Suite & Domain Models
 
-### A. Core Artifact Entity Model (UML Class Diagram)
+### A. Core Artifact Entity Model (UML Class Diagram — Phase 0)
 
 ```mermaid
 classDiagram
@@ -248,7 +248,7 @@ classDiagram
 
 ---
 
-### B. Master Engineering Governance Sequence (UML Sequence Diagram)
+### B. Master Engineering Governance Sequence (UML Sequence Diagram — Phase 1 to 6)
 
 ```mermaid
 sequenceDiagram
@@ -285,7 +285,7 @@ sequenceDiagram
 
 ---
 
-### C. Task Lifecycle State Machine (UML State Machine Diagram)
+### C. Task Lifecycle State Machine (UML State Machine Diagram — Phase 4 & 5)
 
 ```mermaid
 stateDiagram-v2
@@ -313,7 +313,7 @@ stateDiagram-v2
 
 ---
 
-### D. Zero-Downtime Canary Rollout State Machine (UML State Machine)
+### D. Zero-Downtime Canary Rollout State Machine (UML State Machine — Phase 6)
 
 ```mermaid
 stateDiagram-v2
@@ -336,7 +336,7 @@ stateDiagram-v2
 
 ---
 
-### E. Autonomous Swarm Consensus & Self-Healing Protocol (UML Diagram)
+### E. Autonomous Swarm Consensus & Self-Healing Protocol (UML Sequence Diagram — Phase 12)
 
 ```mermaid
 sequenceDiagram
@@ -362,11 +362,74 @@ sequenceDiagram
 
 ---
 
-## 🛠️ 5. Phase-by-Phase Construction Plan
+### F. Adversarial Red-Team vs. Blue-Team Dialectic Debate (UML Sequence Diagram — Phase 13)
 
-Hell-x was constructed across 14 milestones (Phases 0 through 8 foundational operating system + Milestones 9 through 14 platform & intelligence innovations):
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Arch as Architecture Proposal
+    participant RedTeam as Red-Team Hacker Agent
+    participant BlueTeam as Blue-Team Architect Agent
+    participant Arbiter as Dialectic Debate Arbiter
+    participant Gate as ARCHITECTURE_GATE
 
-| Phase / Milestone | Name | Core Components Constructed | Verification Standard |
+    Arch->>RedTeam: 1. Ingest Proposed ADR / API Contract
+    RedTeam->>BlueTeam: 2. Round 1 Attack (JWT Sig Stripping & Alg=none)
+    BlueTeam->>Arbiter: 3. Round 1 Defense (RSA-256 Whitelist Invariant)
+    RedTeam->>BlueTeam: 4. Round 2 Attack (Concurrency Idempotency Race)
+    BlueTeam->>Arbiter: 5. Round 2 Defense (Redis Redlock + DB Unique Index)
+    RedTeam->>BlueTeam: 6. Round 3 Attack (Unindexed Full Table Scan DoS)
+    BlueTeam->>Arbiter: 7. Round 3 Defense (Composite Index + Circuit Breaker)
+    Arbiter->>Arbiter: 8. Calculate Overall Defense Score (92/100 >= 85)
+    Arbiter->>Gate: 9. Issue Formal Approval Ruling
+```
+
+---
+
+### G. Predictive Software Health State Machine (UML State Machine — Phase 14)
+
+```mermaid
+stateDiagram-v2
+    [*] --> HEALTHY: P99 < 50ms, Errors < 0.01%, CPU < 50%
+    
+    HEALTHY --> WATCH: P99 > 60ms or Minor Latency Drift
+    WATCH --> HEALTHY: Telemetry Restabilized
+    
+    WATCH --> DEGRADING: P99 > 100ms or DB Lag > 200ms
+    DEGRADING --> WATCH: Cache Hit Ratio Recovered
+    
+    DEGRADING --> AT_RISK: Error Rate > 0.05% or CPU > 85%
+    AT_RISK --> DEGRADING: Pods Auto-Scaled
+    
+    AT_RISK --> CRITICAL: Error Rate > 1.0% or Active Incidents > 0
+    CRITICAL --> AT_RISK: Self-Healing Hotfix Promoted
+    CRITICAL --> [*]: Fast-Rollback Sentinel Triggered
+```
+
+---
+
+### H. Economic Micro-Spend Hierarchy Stack (UML Block Model — Phase 14)
+
+```mermaid
+flowchart TD
+    Project["Project Level (ROI Multiplier & Total Spend)"]
+    Feature["Feature Level (Cost per Feature USD)"]
+    Req["Requirement Level (Cost per Verified Requirement USD)"]
+    Task["Task Level (Cost per Successful Task USD)"]
+    Agent["Agent Persona Level (Efficiency & Reputation)"]
+    Model["Model Provider Level (OpenAI, Anthropic, Gemini, Ollama)"]
+    Tool["Tool Execution Level (AST Parser, Vitest, Git)"]
+
+    Project --> Feature --> Req --> Task --> Agent --> Model --> Tool
+```
+
+---
+
+## 🛠️ 5. Phase-by-Phase Construction Plan (Phases 0 – 14)
+
+Hell-x was constructed systematically across 15 complete phases (Phases 0 through 8 foundational operating system + Phases 9 through 14 platform & intelligence innovations):
+
+| Phase | Name | Core Components Constructed | Verification Standard |
 | :--- | :--- | :--- | :---: |
 | **Phase 0** | **Foundation Substrate** | SHA-256 EventBus, Content-Addressed ArtifactStore, Git Worktrees, Model Gateway, Policy Engine. | 15 / 15 Tests Passed |
 | **Phase 1** | **Intent $\to$ Specification** | Intent Vectorizer, 10D Completeness Radar, Contradiction Engine, `SPECIFICATION_GATE`. | 8 / 8 Tests Passed |
@@ -377,12 +440,12 @@ Hell-x was constructed across 14 milestones (Phases 0 through 8 foundational ope
 | **Phase 6** | **Release State Machine** | Canary 10% $\to$ 100%, SLI/SLO Watchdogs, Sub-Second Fast-Rollback, `RELEASE_GATE`. | 5 / 5 Tests Passed |
 | **Phase 7** | **Continuous Memory** | 8-Tier Memory Substrate, Telemetry Trace Spans, Pattern Distillation, Agent Reputation, `MEMORY_GATE`. | 5 / 5 Tests Passed |
 | **Phase 8** | **Mission Control Closed Loop** | Autonomous Mission Orchestrator, Dead-Code Elimination & Complexity Refactorer, Automated CVE Patcher. | 3 / 3 Tests Passed |
-| **Milestone 9** | **Live Multi-LLM & CI/CD** | `OpenAIAdapter`, `AnthropicAdapter`, `GeminiAdapter`, `OllamaAdapter`, `GitHubPRSyncer`, `WebhookDriver`. | 6 / 6 Tests Passed |
-| **Milestone 10** | **Mission Control Web Server** | Native Node.js HTTP Server, REST API (`/api/v1/*`), 12-View Engineering Control Plane Dashboard. | 5 / 5 Tests Passed |
-| **Milestone 11** | **Enterprise Security & SLSA** | RSA-2048 / SHA-256 `AttestationSigner`, in-toto SLSA Level 3 Engine, Merkle Ledger, Multi-Sig Gates. | 4 / 4 Tests Passed |
-| **Milestone 12** | **The Grand Capstone: Swarm** | `SwarmCoordinator` (66% Quorum), `RootCauseAnalyzer`, `HotfixSynthesizer`, `SelfHealingEngine`. | 4 / 4 Tests Passed |
-| **Milestone 13** | **Digital Twin & Red-Team** | `DigitalTwinEngine`, `BlastRadiusSimulator`, `DialecticDebateEngine`, `OutcomeMissionEngine`. | 4 / 4 Tests Passed |
-| **Milestone 14** | **Economic Intelligence & Score** | `CostIntelligenceEngine`, `EngineeringScoreEngine` (11D), `SoftwareHealthModel`, `AgentMarketplace`, `AdaptiveWorkflowEngine`. | 5 / 5 Tests Passed |
+| **Phase 9** | **Live Multi-LLM & CI/CD** | `OpenAIAdapter`, `AnthropicAdapter`, `GeminiAdapter`, `OllamaAdapter`, `GitHubPRSyncer`, `WebhookDriver`. | 6 / 6 Tests Passed |
+| **Phase 10** | **Mission Control Web Server** | Native Node.js HTTP Server, REST API (`/api/v1/*`), 12-View Engineering Control Plane Dashboard. | 5 / 5 Tests Passed |
+| **Phase 11** | **Enterprise Security & SLSA** | RSA-2048 / SHA-256 `AttestationSigner`, in-toto SLSA Level 3 Engine, Merkle Ledger, Multi-Sig Gates. | 4 / 4 Tests Passed |
+| **Phase 12** | **Autonomous Swarm & Self-Healing** | `SwarmCoordinator` (66% Quorum), `RootCauseAnalyzer`, `HotfixSynthesizer`, `SelfHealingEngine`. | 4 / 4 Tests Passed |
+| **Phase 13** | **Digital Twin & Red-Team Debate** | `DigitalTwinEngine`, `BlastRadiusSimulator`, `DialecticDebateEngine`, `OutcomeMissionEngine`. | 4 / 4 Tests Passed |
+| **Phase 14** | **Economic Intelligence & Score** | `CostIntelligenceEngine`, `EngineeringScoreEngine` (11D), `SoftwareHealthModel`, `AgentMarketplace`, `AdaptiveWorkflowEngine`. | 5 / 5 Tests Passed |
 | **Total** | **Full Engineering OS** | **64 Test Files, 94 Automated Suites, Zero Failures** | 🟢 **100% Passed** |
 
 ---
@@ -423,16 +486,16 @@ Hell-x provides a comprehensive command line interface (`hellx`):
 # 1. Execute an autonomous closed-loop engineering mission
 npx tsx src/cli/index.ts mission "Build Enterprise Multi-Tenant Subscription and Automated Invoicing Engine"
 
-# 2. Run the Grand Capstone Swarm & Autonomous Self-Healing Simulation
+# 2. Run the Phase 12 Grand Capstone Swarm & Autonomous Self-Healing Simulation
 npx tsx src/cli/index.ts simulate-grand-pilot
 
-# 3. Run the Digital Twin, Blast Radius & Adversarial Red-Team Debate Simulation
+# 3. Run the Phase 13 Digital Twin, Blast Radius & Adversarial Red-Team Debate Simulation
 npx tsx src/cli/index.ts simulate-twin
 
-# 4. Run the Economic Intelligence, 11D Engineering Score & Adaptive Workflow Simulation
+# 4. Run the Phase 14 Economic Intelligence, 11D Engineering Score & Adaptive Workflow Simulation
 npx tsx src/cli/index.ts simulate-economy
 
-# 5. Run the Enterprise Security, SLSA Level 3 & Multi-Sig Gate Simulation
+# 5. Run the Phase 11 Enterprise Security, SLSA Level 3 & Multi-Sig Gate Simulation
 npx tsx src/cli/index.ts simulate-enterprise
 
 # 6. Calculate comprehensive 11-dimensional evidence-linked engineering score

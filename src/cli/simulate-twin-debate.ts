@@ -1,6 +1,6 @@
 /**
  * Hell-x: The AI-Native Operating System for Software Engineering
- * Milestone 13 Simulation: Digital Twin, Adversarial Red-Team Debate & Outcome Missions
+ * Phase 13 Simulation: Digital Twin, Adversarial Red-Team Debate & Outcome Missions
  */
 
 import chalk from "chalk";
@@ -12,7 +12,7 @@ import { OutcomeMissionEngine } from "../mission/outcome-mission-engine.js";
 
 export async function runTwinDebateSimulation(): Promise<boolean> {
   console.log(chalk.bold.hex("#06b6d4")("\n========================================================================================="));
-  console.log(chalk.bold.hex("#06b6d4")(" 🔮 HELL-X OS — MILESTONE 13: DIGITAL TWIN, RED-TEAM DEBATE & OUTCOME MISSIONS 🔮 "));
+  console.log(chalk.bold.hex("#06b6d4")(" 🔮 HELL-X OS — PHASE 13: DIGITAL TWIN, RED-TEAM DEBATE & OUTCOME MISSIONS 🔮 "));
   console.log(chalk.bold.hex("#06b6d4")("=========================================================================================\n"));
 
   const os = new EngineeringOS();
