@@ -1,0 +1,5 @@
+node_modules
+dist
+.hellx
+*.log
+.DS_Store

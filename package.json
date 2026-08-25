@@ -1,0 +1,42 @@
+{
+  "name": "@hell-x/engineering-os",
+  "version": "0.1.0",
+  "description": "Hell-x: The AI-Native Operating System for Software Engineering",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "hellx": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "simulate": "tsx src/cli/simulate.ts"
+  },
+  "keywords": [
+    "ai-native",
+    "engineering-os",
+    "multi-agent",
+    "verification",
+    "provenance",
+    "git-worktrees"
+  ],
+  "author": "Hell-x Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.6"
+  }
+}
