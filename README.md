@@ -5,7 +5,7 @@
 [![Local Host](https://img.shields.io/badge/Local%20Host-http%3A%2F%2Flocalhost%3A3000-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](#-6-12-view-engineering-control-plane-local-host)
 [![GitHub License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![SLSA Level 3](https://img.shields.io/badge/SLSA-Level%203%20Attested-cyan?style=for-the-badge&logo=security)](https://slsa.dev)
-[![Tests Passing](https://img.shields.io/badge/Vitest-98%2F98%20Passed%20(100%25)-emerald?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/thakurcodeshere/Hell-x)
+[![Tests Passing](https://img.shields.io/badge/Vitest-182%2F182%20Passed%20(100%25)-emerald?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/thakurcodeshere/Hell-x)
 [![Node Version](https://img.shields.io/badge/Node-%3E%3D20.0.0-f97316?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9.3%20Strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 

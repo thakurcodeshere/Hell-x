@@ -5,3 +5,5 @@ dist
 .DS_Store
 
 .vercel
+.stryker-tmp
+mutation-report
